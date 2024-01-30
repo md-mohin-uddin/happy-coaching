@@ -20,7 +20,7 @@
             <li>Services</li>
             <li>About Us</li>
             <li>Extra SalePage</li>
-            <li><button>Get your free guide now</button></li>
+            <li class="get-guide" onclick="getFreeGuide()"><button>Get your free guide now</button></li>
           </ul>
         </nav>
         <div class="header"></div>
@@ -39,7 +39,7 @@
               I help people to discover their true potential and live a fulfilling life...Discover the simple 3 steps that I discovered to hack productivity. It just works and it is begin using backed by science. Wanna transform your life?
             </p>
             
-            <button>Get Your Free Guide Now</button>
+            <button class="get-guide" onclick="getFreeGuide()">Get Your Free Guide Now</button>
           </div>
           <div class="hero-right">
             <img class="hero-right-img" src="./images/Frame 42906.png" alt="">
@@ -182,7 +182,7 @@
             </div>
           </div>
           <div class="blog-button">
-            <button>Read more blogs</button>
+            <a href="https://www.linkedin.com/in/mdmohinuddin"><button>Read more blogs</button></a>
           </div>
         </div>
         <div class="free-guide">
@@ -201,7 +201,7 @@
               quae ab illo inventore veritatis et quasi architecto beatae vitae
               dicta sunt explicabo.
             </p>
-            <button>Get Your Free Guide Now</button>
+            <button class="get-guide" onclick="getFreeGuide()">Get Your Free Guide Now</button>
           </div>
           <div class="free-guide-right">
             <img src="./images/Group.png" alt="" />
@@ -211,7 +211,7 @@
           <div class="online-session-left">
             <h3>Get 15-Minutes Complimentary online session.</h3>
             <p>Limited Period Offer. Claim Now.</p>
-            <button>Book Now</button>
+            <a href="https://www.github.com/md-mohin-uddin"><button>Book Now</button></a>
           </div>
           <div class="online-session-right">
             <img src="./images/Image.png" alt="" />
@@ -229,8 +229,8 @@
               </p>
             </div>
             <div class="subs-right">
-              <input type="text" placeholder="Enter your email address" />
-              <button>Subscribe</button>
+              <input class="input-email" type="email" placeholder="Enter your email address" />
+              <button id="subscribe" onclick="subscribe()">Subscribe</button>
             </div>
           </div>
           <div class="footer-down">
