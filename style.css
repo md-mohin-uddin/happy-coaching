@@ -36,6 +36,8 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
@@ -52,15 +54,15 @@ nav ul li {
 
 button {
   font-family: Kumbh Sans;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 18px;
-  letter-spacing: 0em;
-  text-align: right;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: center;
   background-color: #20ad96;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 16px;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -68,6 +70,25 @@ button {
 button:hover {
   background-color: #1d8b7a;
 }
+
+@media screen and (max-width: 768px) and (min-width: 230px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
 /* Hero start */
 .hero {
   display: flex;
@@ -97,7 +118,37 @@ button:hover {
 .hero-right p {
   color: #4a556c80;
 }
+
+@media screen and (max-width: 768px) and (min-width: 230px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .hero-left,
+  .hero-right {
+    flex: none;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .hero-right-img {
+    position: static;
+    transform: none;
+    margin-bottom: 20px;
+  }
+
+  .hero-right img {
+    width: 50%;
+    margin-top: 0;
+  }
+}
+
 /* Hero end */
+/* Default styles */
+
 .area-up {
   display: flex;
   align-items: center;
@@ -127,9 +178,34 @@ button:hover {
   justify-content: center;
   height: 328px;
 }
+
 .area-down-card {
   width: 300px;
   padding: 20px;
+}
+
+/* Media queries for responsive layout */
+
+@media only screen and (max-width: 768px) and (min-width: 230px) {
+  .area-up {
+    display: flex;
+    flex-direction: column;
+  }
+  .area-down {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* margin-top: 250px; */
+    /* margin-bottom: 250px; */
+    text-align: center;
+  }
+}
+@media screen and (max-width: 912px) {
+  .area-down {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 250px;
+    text-align: center;
+  }
 }
 
 .testimonials {
@@ -161,6 +237,24 @@ button:hover {
 .filled {
   color: gold;
 }
+@media screen and (max-width: 768px) and (min-width: 230px) {
+  .testimonials h2 {
+    display: flex;
+    justify-content: left;
+  }
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 912px) {
+  .testimonial {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+}
 /* testimonials part end */
 /* blog part start */
 .blog {
@@ -186,12 +280,27 @@ button:hover {
 .card-text {
   padding: 25px;
 }
+@media screen and (max-width: 768px) and (min-width: 230px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 912px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+}
 /* blog part end */
+/* free guide start */
 .free-guide {
   display: flex;
-  align-items: center; /* Align items vertically */
-  justify-content: space-between; /* Space out items */
-  padding: 0 40px; /* Add padding on both sides */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
   background-color: #faf8f6;
   border-radius: 5px;
   margin: 5%;
@@ -214,7 +323,32 @@ button:hover {
 .free-guide-right p {
   color: #4a556c80;
 }
-
+@media screen and (max-width: 768px) and (min-width: 230px) {
+  .free-guide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .free-guide-right img {
+    width: 100%;
+    flex: 1;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 912px) {
+  .free-guide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .free-guide-right img {
+    width: 100%;
+    flex: 1;
+    padding: 20px;
+  }
+}
+/* free guide end */
+/* online-session start */
 .online-session {
   display: flex;
   align-items: center;
@@ -245,6 +379,15 @@ button:hover {
 .online-session-right img {
   width: 100%;
 }
+@media screen and (max-width: 768px) and (min-width: 230px) {
+  .online-session {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* online-session end */
+/* subscribe start */
 .subscribe {
   display: flex;
   padding-left: 15%;
@@ -266,6 +409,21 @@ input {
   margin-right: 20px;
   text-align: left;
 }
+@media screen and (max-width: 768px) and (min-width: 230px) {
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 350px;
+  }
+  input {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 912px) {
+}
+/* subscribe end */
+/* footer start */
 .footer {
   display: flex;
   flex-direction: column;
@@ -275,7 +433,6 @@ input {
 .footer-down {
   display: flex;
   width: 70%;
-  height: 316px;
   margin: 0 auto;
   text-align: justify;
   align-self: center;
@@ -303,12 +460,6 @@ input {
 p {
   color: #4a556c;
 }
-@media (max-width: 768px) {
-  .footer-1 {
-    flex-basis: 100%; /* Make each column full width on smaller screens */
-    margin-right: 0; /* Remove right margin on smaller screens */
-  }
-}
 
 @media screen and (max-width: 768px) {
   nav ul {
@@ -318,13 +469,5 @@ p {
 
   nav ul li {
     margin-bottom: 10px;
-  }
-
-  .subscribe {
-    flex-direction: column;
-  }
-
-  .subscribe input[type="text"] {
-    width: 100%;
   }
 }
